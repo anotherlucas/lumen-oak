@@ -25,10 +25,12 @@ export const SectionTitle = styled.h2`
   justify-content:center;
   width:100%;
   min-height:5rem;
+  background:#FFF;
   text-align:center;
   font-weight:300;
   font-size:2rem;
   letter-spacing:.25rem;
+  z-index:10;
 `
 
 export const SectionHeader = styled.h4`
