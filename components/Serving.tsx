@@ -1,16 +1,15 @@
 import { Serving, CompassWrap, NeedleSpinner } from 'styles/Serving';
 import { SectionTitle, SectionHeader, SectionCopy, DividerTop, DividerBottom } from 'styles/Shared';
-import { PointCopy } from 'styles/Skills';
 
-import Compass from 'svgs/Compass'
-import CompassNeedle from 'svgs/CompassNeedle'
+import Compass from 'svgs/Compass';
+import CompassNeedle from 'svgs/CompassNeedle';
 
 export default function ServingComponent() {
   return (
     <Serving>
       <SectionTitle>
         <DividerTop />
-          NOW SERVING
+        NOW SERVING
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>NON-TECHNICAL FOUNDERS & EXECUTIVES</SectionHeader>
@@ -19,8 +18,8 @@ export default function ServingComponent() {
       </SectionCopy>
       <CompassWrap>
         <Compass />
-        <NeedleSpinner style={{ transform:'rotate(90deg)'}}>
-          <CompassNeedle/>
+        <NeedleSpinner style={{ transform: 'rotate(90deg)' }}>
+          <CompassNeedle />
         </NeedleSpinner>
       </CompassWrap>
     </Serving>

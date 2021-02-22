@@ -4,6 +4,7 @@ import Mission from 'components/Mission';
 import Philosophy from 'components/Philosophy';
 import Skills from 'components/Skills';
 import Serving from 'components/Serving';
+import Start from 'components/Start';
 
 import { Main } from 'styles/Page';
 
@@ -21,6 +22,7 @@ export default function HomePage() {
         <Philosophy />
         <Skills />
         <Serving />
+        <Start />
       </Main>
     </>
   );

@@ -71,3 +71,27 @@ export const SectionSubheader = styled.div`
   font-size:1.25rem;
   letter-spacing:.375rem;
 `
+
+export const SectionButton = styled.button`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:4.25rem;
+  padding: 0 4.75rem;
+  margin:0 auto;
+  background:#FFF;
+  color:#FF6B00;
+  border: 2px solid #FF6B00;
+  border-radius:.625rem;
+  box-shadow: 0px .25rem .3125rem rgba(255, 107, 0, 0.25);
+  font-family: 'Lato', sans-serif;
+  font-size:1.25rem;
+  font-weight:600;
+  letter-spacing:.1875rem;
+  outline:none;
+  &:hover {
+    background:#FF6B00;
+    color:#FFF;
+    cursor:pointer;
+  }
+`

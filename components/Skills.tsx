@@ -10,7 +10,7 @@ export default function SkillsComponent() {
     <Skills>
       <SectionTitle>
         <DividerTop />
-        WHY I DO IT BETTER
+        WHY MY PLANS ARE BETTER
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>THE RIGHT TALENT STACK</SectionHeader>
@@ -27,15 +27,12 @@ export default function SkillsComponent() {
         <Points>
           <Point>
             <PointLabel>WORLD-CLASS BUSINESS EDUCATION</PointLabel>
-            <PointCopy>
-              Graduate of the Wharton School of Business
-              where I studied finance and management
-            </PointCopy>
+            <PointCopy>Graduate of the Wharton School of Business where I studied finance and management</PointCopy>
           </Point>
           <Point>
             <PointLabel>A DECADE OF SOFTWARE EXPERIENCE</PointLabel>
             <PointCopy>
-              15,000+ hours developing software at every level from full-stack dev to senior management
+              20,000+ hours developing software at every level from full-stack dev to senior management
             </PointCopy>
           </Point>
           <Point>

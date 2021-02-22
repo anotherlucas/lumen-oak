@@ -14,7 +14,7 @@ export const CompassWrap = styled.div`
   position:relative;
   width:24rem;
   height:24rem;
-  margin: 0 auto 10rem;
+  margin: 0 auto 6rem;
   svg {
     position:absolute;
     width:100%;
