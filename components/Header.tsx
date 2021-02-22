@@ -9,9 +9,10 @@ export default function HeaderComponent() {
         Lucas Lemos
         <DividerBottom />
       </Title>
-      <Subtitle>SOFTWARE CONSULTING</Subtitle>
+      <Subtitle>SOFTWARE ARCHITECT</Subtitle>
       <Navigation>
         <NavItem data-active="true">CONSULTING</NavItem>
+        <NavItem>PORTFOLIO</NavItem>
         <NavItem>BLOG</NavItem>
       </Navigation>
     </Header>

@@ -6,7 +6,7 @@ export const Mission = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width:58rem;
-  max-width:calc(100% - 5.25rem);
+  max-width:calc(100% - 4rem);
   margin: 0 auto;
 `;
 
@@ -32,10 +32,11 @@ export const TechnologyPlan = styled.div`
   flex-direction:row;
   flex-wrap:wrap;
   align-items:flex-start;
-  justify-content:center;
-  width:calc(100% - 8rem);
-  padding: 4rem 3rem;
-  margin: 0 4rem;
+  justify-content:space-between;
+  width:100%;
+  max-width:48rem;
+  padding: 4rem 2.75rem;
+  margin: 0 auto;
   border:.1875rem solid #FF6B00;
   border-radius:10px;
   box-shadow: 0px .25rem .3125rem rgba(255, 107, 0, 0.25);
@@ -62,8 +63,8 @@ export const PlanItem = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-  width:42%;
-  margin: 1rem 4%;
+  width:47%;
+  margin: 1rem 0;
 `
 export const PlanImage = styled.div`
   position:relative;
@@ -98,7 +99,7 @@ export const AndDivider = styled.div`
   justify-content:center;
   width:100%;
   height:1px;
-  margin: 4rem 0 2rem;
+  margin: 4rem 0 1rem;
   &:before {
     content:'&';
     position:absolute;

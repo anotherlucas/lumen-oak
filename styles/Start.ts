@@ -5,9 +5,9 @@ export const Start = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width:54rem;
-  max-width:calc(100% - 5.25rem);
-  margin: -1rem auto 10rem;
+  width:58rem;
+  max-width:calc(100% - 4rem);
+  margin: -1rem auto 12rem;
 `;
 
 export const InCard = styled.span`

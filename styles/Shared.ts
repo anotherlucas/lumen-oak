@@ -24,11 +24,11 @@ export const SectionTitle = styled.h2`
   align-items:center;
   justify-content:center;
   width:100%;
-  min-height:5rem;
+  min-height:5.25rem;
   background:#FFF;
   text-align:center;
   font-weight:300;
-  font-size:2rem;
+  font-size:2.125rem;
   letter-spacing:.25rem;
   z-index:10;
 `
@@ -41,7 +41,7 @@ export const SectionHeader = styled.h4`
   margin: 3.375rem auto 0;
   text-align:center;
   font-weight:600;
-  font-size:2.0625rem;
+  font-size:2.25rem;
   letter-spacing:.25rem;
 `
 
@@ -76,7 +76,7 @@ export const SectionButton = styled.button`
   display:flex;
   justify-content:center;
   align-items:center;
-  height:4.25rem;
+  height:4.875rem;
   padding: 0 4.75rem;
   margin:0 auto;
   background:#FFF;
@@ -85,10 +85,11 @@ export const SectionButton = styled.button`
   border-radius:.625rem;
   box-shadow: 0px .25rem .3125rem rgba(255, 107, 0, 0.25);
   font-family: 'Lato', sans-serif;
-  font-size:1.25rem;
+  font-size:1.5rem;
   font-weight:600;
   letter-spacing:.1875rem;
   outline:none;
+  transition:150ms ease-out;
   &:hover {
     background:#FF6B00;
     color:#FFF;

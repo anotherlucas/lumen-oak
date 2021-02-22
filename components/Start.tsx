@@ -17,18 +17,18 @@ export default function StartComponent() {
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>
-        THE DOCTOR IS <InCard>IN</InCard>
+        THE ARCHITECT IS <InCard>IN</InCard>
       </SectionHeader>
       <SectionCopy>
         I am currently taking on new clients
         <br />
         Let’s build something amazing together
       </SectionCopy>
-      <SectionSubheader>
+      <SectionSubheader style={{ marginTop:`-1.5rem`}}>
         FREE CONSULTATION
         <DividerBottom />
       </SectionSubheader>
-      <SectionButton>SCHEDULE NOW</SectionButton>
+      <SectionButton style={{ marginTop:`-.5rem`}}>SCHEDULE NOW</SectionButton>
     </Start>
   );
 }

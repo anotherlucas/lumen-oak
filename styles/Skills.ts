@@ -5,8 +5,8 @@ export const Skills = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width:54rem;
-  max-width:calc(100% - 5.25rem);
+  width:58rem;
+  max-width:calc(100% - 4rem);
   margin: 0 auto;
 `;
 

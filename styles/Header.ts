@@ -5,13 +5,13 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height:54rem;
+  min-height:42rem;
 `;
 
 export const Title = styled.h1`
   position:relative;
   margin: 4rem auto .5rem;
-  padding: 1rem 1rem;
+  padding: 1.25rem 2rem;
   text-align:center;
   font-weight:500;
   font-size:6rem;
@@ -22,7 +22,7 @@ export const Subtitle = styled.h4`
   display:flex;
   align-items:center;
   height:6.25rem;
-  margin: 0 auto;
+  margin: 0 auto 1rem;
   text-align:center;
   font-weight:300;
   font-size:1.875rem;
@@ -30,23 +30,25 @@ export const Subtitle = styled.h4`
 `
 
 export const Navigation = styled.div`
-  display:none;
+  display:flex;
   justify-content:center;
   align-items:center;
-  padding: 2rem 0 0;
+  padding: 1rem 0 0;
 `
 
 export const NavItem = styled.a`
   position:relative;
-  margin: 0 .75rem;
+  margin: 0 .875rem;
   padding: 1.75rem 0;
-  font-size:1.125rem;
+  font-size:1.25rem;
   font-weight:300;
-  letter-spacing:.25rem;
+  letter-spacing:.3125rem;
   cursor:pointer;
+  opacity:.5;
   &[data-active="true"]{
     font-style:italic;
     cursor:default;
+    opacity:1;
     &:before {
       content:'>';
       position:absolute;
