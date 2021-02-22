@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Lucas Lemos</title>
+        <title>LL | Consulting</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

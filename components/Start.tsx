@@ -24,11 +24,11 @@ export default function StartComponent() {
         <br />
         Let’s build something amazing together
       </SectionCopy>
-      <SectionSubheader style={{ marginTop:`-1.5rem`}}>
+      <SectionSubheader style={{ marginTop: `-1.5rem` }}>
         FREE CONSULTATION
         <DividerBottom />
       </SectionSubheader>
-      <SectionButton style={{ marginTop:`-.5rem`}}>SCHEDULE NOW</SectionButton>
+      <SectionButton style={{ marginTop: `-.5rem` }}>SCHEDULE NOW</SectionButton>
     </Start>
   );
 }

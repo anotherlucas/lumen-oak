@@ -31,7 +31,7 @@ export default function MissionComponent() {
       <SectionHeader>CLEAR TECHNOLOGY DIRECTION</SectionHeader>
       <SectionCopy>
         I translate your software ideas into <br />
-        the plans that make them possible
+        clear and precise development plans
       </SectionCopy>
       <SoftwareVisionWrap>
         <SoftwareVision />
@@ -89,7 +89,7 @@ export default function MissionComponent() {
       <SectionHeader>ENGINEERING OVERSIGHT</SectionHeader>
       <SectionCopy>
         I mobilize and supervise the engineering teams <br />
-        that bring your software ideas to life
+        that bring your software projects to life
       </SectionCopy>
       <OfficeWrap>
         <Office />

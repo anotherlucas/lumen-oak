@@ -40,6 +40,8 @@ export const NavItem = styled.a`
   position:relative;
   margin: 0 .875rem;
   padding: 1.75rem 0;
+  text-decoration:none;
+  color:#FF6B00;
   font-size:1.25rem;
   font-weight:300;
   letter-spacing:.3125rem;
@@ -49,6 +51,7 @@ export const NavItem = styled.a`
     font-style:italic;
     cursor:default;
     opacity:1;
+    letter-spacing:.375rem;
     &:before {
       content:'>';
       position:absolute;
