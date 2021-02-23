@@ -25,7 +25,7 @@ export default function MissionComponent() {
     <Mission>
       <SectionTitle>
         <DividerTop />
-          THE LUCAS LEMOS ADVANTAGE
+        THE LUCAS LEMOS ADVANTAGE
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>CLEAR TECHNOLOGY DIRECTION</SectionHeader>
