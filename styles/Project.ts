@@ -5,8 +5,8 @@ export const Project = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width:80rem;
-  max-width:calc(100% - 4rem);
+  width:70rem;
+  max-width:calc(100% - 2.5rem);
   margin: 2rem auto 0;
 `;
 
@@ -41,7 +41,7 @@ export const LogoWrap = styled.div`
   }
   img {
     position:relative;
-    height:130%;
+    height:110%;
     width:auto;
     margin: -10% 0 0;
   }
@@ -51,8 +51,7 @@ export const ImageCarousel = styled.div`
   display:flex;
   flex-direction:column;
   width:100%;
-  margin: 4rem auto 5rem;
-  overflow:hidden;
+  margin: 2.25rem auto 5rem;
 `
 export const ImageSwitcher = styled.div`
   display:flex;
@@ -79,28 +78,51 @@ export const ImageSwitch = styled.div`
 export const Images = styled.div`
   position:relative;
   flex:1;
-  margin: 0 1.25rem;
-  height:44rem;
+  margin: 0;
+  overflow:visible;
 `
-export const Image = styled.div`
+
+export const ImageWrap = styled.div`
   position:absolute;
+  width:100%;
+  height:100%;
   display:flex;
   justify-content:center;
   align-items:center;
-  width:100%;
-  height:100%;
-  margin: 0 auto;
-  top:0;
+  pointer-events:none;
+`
+
+export const Image = styled.img`
+  position:absolute;
+  max-height:60%;
+  max-width:100%;
   transition: all 200ms ease-out;
   opacity:0;
-  &[data-active="true"]{
-    opacity:1;
-  }
-  img {
-    position:relative;
-    max-width:100%;
+  user-select:none;
+  pointer-events:all;
+  &[data-position="0"]{
     max-height:100%;
-    user-select:none;
+    opacity:1;
+    z-index:10;
+  }
+  &[data-position="-1"],
+  &[data-position="1"]{
+    opacity:.5;
+    max-height:90%;
+    margin: 1% auto;
+    z-index:5;
+  }
+  &[data-position="-2"],
+  &[data-position="2"]{
+    max-height:80%;
+    margin: 3% auto;
+    opacity:.25;
+  }
+  &[data-position="-3"],
+  &[data-position="3"]{
+    max-height:70%;
+    margin: 5% auto;
+    opacity:.1;
   }
 `
 

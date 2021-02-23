@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Project from 'components/Project';
 
-import FlexconomyLogo from 'svgs/Projects/Flexconomy/Logo';
+import FlexconomyLogo from 'svgs/FlexconomyLogo';
 
 export default function PortfolioPage() {
   return (
@@ -13,7 +13,7 @@ export default function PortfolioPage() {
       </Head>
 
       <>
-        <Project Logo={<img src="/images/BestApps.png" />} images={['BestAppsA.png']} />
+        <Project Logo={<img src="/images/BestApps.png" />} images={['BestAppsA.png', 'BestAppsC.png', 'BestAppsC.png', 'BestAppsB.png', 'BestAppsC.png']} />
         <Project Logo={<FlexconomyLogo />} images={['FlexconomyA.png', 'FlexconomyB.png']} />
       </>
     </>

@@ -13,7 +13,7 @@ export default function StartComponent() {
     <Start>
       <SectionTitle>
         <DividerTop />
-        GETTING STARTED
+        BUILD WITH CONFIDENCE
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>
