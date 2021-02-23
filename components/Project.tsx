@@ -35,7 +35,6 @@ export default function ProjectComponent({ Logo, images }: Props) {
           <Images>
             { images.map(( src, i ) => (
               <Image 
-                key={src}
                 style={{ left:`${(i - activeImage) * 100}%`}} 
                 data-active={activeImage === i}>
                 <img src={`/images/${src}`} />

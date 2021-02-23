@@ -16,7 +16,7 @@ export default function PortfolioPage() {
       </Head>
 
       <Main>
-        <Project Logo={<img src="/images/BestApps.png" />} images={['BestAppsA.png', 'FlexconomyA.png','BestAppsA.png', 'FlexconomyA.png','BestAppsA.png', 'FlexconomyA.png']} />
+        <Project Logo={<img src="/images/BestApps.png" />} images={['BestAppsA.png']} />
         <Project Logo={<FlexconomyLogo />} images={['FlexconomyA.png', 'FlexconomyB.png']} />
       </Main>
     </>
