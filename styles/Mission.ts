@@ -39,8 +39,10 @@ export const TechnologyPlan = styled.div`
   margin: 0 auto;
   border:.1875rem solid ${props => props.theme.primaryColor};
   border-radius:10px;
-  box-shadow: 0px .25rem .3125rem rgba(255, 107, 0, 0.25);
-  transition: border-color ${props => props.theme.transitionSpeed} linear;
+  box-shadow: 0px .25rem .3125rem ${props => props.theme.primaryColor}44;
+  transition:
+    border-color ${props => props.theme.transitionSpeed} linear,
+    box-shadow ${props => props.theme.transitionSpeed} linear;
 `
 
 export const TechnologyPlanHeaderWrap = styled.div`
@@ -107,11 +109,12 @@ export const AndDivider = styled.div`
     top:-1.875rem;
     display:block;
     width:6rem;
-    background:#FFF;
+    background:${props => props.theme.background};
     text-align:center;
     font-size:3rem;
     font-weight:300;
     z-index:10;
+    transition: background ${props => props.theme.transitionSpeed} linear;
   }
 `
 

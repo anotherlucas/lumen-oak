@@ -15,10 +15,10 @@ export default function PortfolioPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
       </Head>
 
-      <Main>
+      <>
         <Project Logo={<img src="/images/BestApps.png" />} images={['BestAppsA.png']} />
         <Project Logo={<FlexconomyLogo />} images={['FlexconomyA.png', 'FlexconomyB.png']} />
-      </Main>
+      </>
     </>
   );
 }

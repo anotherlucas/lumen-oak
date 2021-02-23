@@ -14,7 +14,8 @@ export const InCard = styled.span`
   display:block;
   margin-left:.75rem;
   padding: .5rem .875rem;
-  background:#FF5C00;
+  background:${props => props.theme.primaryColor};
+  transition: background ${props => props.theme.transitionSpeed} linear;
   color:white;
   border-radius:.1875rem;
 `

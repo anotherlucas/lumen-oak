@@ -28,9 +28,33 @@ export default function UXUI() {
       <rect className="fill-primary" x="226.659" y="125.693" width="57.0553" height="60.481" rx="4" fill="#000000" />
       <rect className="fill-tertiary" x="226.659" y="101.752" width="35.32" height="13.8602" rx="2" fill="#ACACAC" />
       <rect className="fill-tertiary" x="267.413" y="101.752" width="16.3015" height="13.8602" rx="2" fill="#ACACAC" />
-      <rect className="fill-tertiary" x="225.301" y="191.214" width="17.66" height="16.3803" rx="8.19014" fill="#ACACAC" />
-      <rect className="fill-tertiary" x="245.678" y="191.214" width="17.66" height="16.3803" rx="8.19014" fill="#ACACAC" />
-      <rect className="fill-tertiary" x="266.055" y="191.214" width="17.66" height="16.3803" rx="8.19014" fill="#ACACAC" />
+      <rect
+        className="fill-tertiary"
+        x="225.301"
+        y="191.214"
+        width="17.66"
+        height="16.3803"
+        rx="8.19014"
+        fill="#ACACAC"
+      />
+      <rect
+        className="fill-tertiary"
+        x="245.678"
+        y="191.214"
+        width="17.66"
+        height="16.3803"
+        rx="8.19014"
+        fill="#ACACAC"
+      />
+      <rect
+        className="fill-tertiary"
+        x="266.055"
+        y="191.214"
+        width="17.66"
+        height="16.3803"
+        rx="8.19014"
+        fill="#ACACAC"
+      />
       <rect className="fill-tertiary" x="225.301" y="212.634" width="58.4138" height="13.8602" rx="2" fill="#ACACAC" />
       <path className="stroke-tertiary" d="M222.584 120.653L287.79 120.653" stroke="#ACACAC" strokeWidth="0.5" />
     </svg>

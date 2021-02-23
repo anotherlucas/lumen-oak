@@ -6,20 +6,15 @@ export const Header = styled.div`
   flex-direction: column;
   justify-content: center;
   min-height:36rem;
-  background:${props => props.theme.background };
-  color:${props => props.theme.primaryColor };
-  transition: 
-    color ${props => props.theme.transitionSpeed } linear, 
-    background ${props => props.theme.transitionSpeed } linear;
 `;
 
 export const Title = styled.h1`
   position:relative;
-  margin: 4rem auto .5rem;
+  margin: 5.5rem auto .5rem;
   padding: 1rem 4rem;
   text-align:center;
-  font-weight:400;
-  font-size:4.75rem;
+  font-weight:600;
+  font-size:5.25rem;
   letter-spacing:.3125rem;
 `
 

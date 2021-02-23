@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
+  min-height:100%;
   background:${props => props.theme.background };
   color:${props => props.theme.primaryColor };
+  overflow:auto;
   transition: 
     color ${props => props.theme.transitionSpeed } linear, 
     background ${props => props.theme.transitionSpeed } linear;
