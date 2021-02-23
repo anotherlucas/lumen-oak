@@ -11,9 +11,9 @@ import {
   FullScreenBtn,
   ImageList,
   ImageListItem,
-} from 'styles/Projects/Shared';
+} from 'styles/Project';
 import { DividerTop } from 'styles/Shared';
-import { SyntheticEvent, useState } from 'react';
+import { useState } from 'react';
 import Arrow from 'svgs/Projects/Arrow';
 import Expand from 'svgs/Projects/Expand';
 

@@ -1,8 +1,5 @@
 import Head from 'next/head';
 import Project from 'components/Project';
-import Flexconomy from 'components/Projects/Flexconomy';
-
-import { Main } from 'styles/App';
 
 import FlexconomyLogo from 'svgs/Projects/Flexconomy/Logo';
 

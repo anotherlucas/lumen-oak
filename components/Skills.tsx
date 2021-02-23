@@ -10,7 +10,7 @@ export default function SkillsComponent() {
     <Skills>
       <SectionTitle>
         <DividerTop />
-        WHY MY PLANS ARE BETTER
+        THE LUCAS LEMOS ADVANTAGE
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>THE RIGHT TALENT STACK</SectionHeader>

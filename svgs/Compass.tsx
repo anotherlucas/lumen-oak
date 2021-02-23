@@ -131,7 +131,7 @@ export default function Compass() {
         r="144.5"
         stroke="black"
         strokeWidth="10"
-        stroke-dasharray="1 5"
+        strokeDasharray="1 5"
       />
       <mask className="fill-background" id="path-23-inside-2" fill="white">
         <path

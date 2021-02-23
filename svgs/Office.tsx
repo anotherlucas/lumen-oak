@@ -47,10 +47,10 @@ export default function Oversight() {
         className="stroke-tertiary"
         d="M710.258 216.401L710.258 366.161M866.64 216.401L866.64 366.161M813.374 216.401L813.374 366.161M760.195 216.401L760.195 366.161M917 216.401L917 366.161"
         stroke="black"
-        stroke-dasharray="2 2"
+        strokeDasharray="2 2"
       />
-      <path className="stroke-tertiary" d="M937.457 216.401L673.002 216.401" stroke="black" stroke-dasharray="2 2" />
-      <path className="stroke-tertiary" d="M937.457 366.161L673.002 366.161" stroke="black" stroke-dasharray="2 2" />
+      <path className="stroke-tertiary" d="M937.457 216.401L673.002 216.401" stroke="black" strokeDasharray="2 2" />
+      <path className="stroke-tertiary" d="M937.457 366.161L673.002 366.161" stroke="black" strokeDasharray="2 2" />
       <rect className="fill-primary" x="722.48" y="318.662" width="21.9007" height="14.9847" rx="4" fill="black" />
       <rect className="fill-primary" x="716.715" y="295.608" width="104.893" height="14.9847" rx="4" fill="black" />
       <rect className="fill-tertiary" x="750.145" y="318.662" width="68.0075" height="14.9847" rx="4" fill="#CBCBCB" />
@@ -90,9 +90,9 @@ export default function Oversight() {
         stroke="black"
         strokeWidth="2"
       />
-      <path className="stroke-tertiary" d="M246.412 202.575V479.802" stroke="black" stroke-dasharray="2 2" />
-      <path className="stroke-tertiary" d="M370.197 202.575V479.802" stroke="black" stroke-dasharray="2 2" />
-      <path className="stroke-tertiary" d="M492.691 202.575V479.802" stroke="black" stroke-dasharray="2 2" />
+      <path className="stroke-tertiary" d="M246.412 202.575V479.802" stroke="black" strokeDasharray="2 2" />
+      <path className="stroke-tertiary" d="M370.197 202.575V479.802" stroke="black" strokeDasharray="2 2" />
+      <path className="stroke-tertiary" d="M492.691 202.575V479.802" stroke="black" strokeDasharray="2 2" />
       <path
         className="fill-background stroke-primary"
         d="M130.273 270.341L130.273 238.683C130.273 237.855 130.945 237.183 131.773 237.183H237.987C238.816 237.183 239.487 237.855 239.487 238.683V270.341C239.487 271.169 238.816 271.841 237.987 271.841H131.773C130.945 271.841 130.273 271.169 130.273 270.341Z"
@@ -208,7 +208,7 @@ export default function Oversight() {
         stroke="black"
       />
       <circle className="fill-primary" cx="393.963" cy="254.512" r="11.3455" fill="black" />
-      <path className="stroke-tertiary" d="M619.254 228.579L123.292 228.579" stroke="black" stroke-dasharray="2 2" />
+      <path className="stroke-tertiary" d="M619.254 228.579L123.292 228.579" stroke="black" strokeDasharray="2 2" />
       <path
         className="fill-tertiary"
         d="M189.679 267.046H170.337C167.489 267.046 165.18 264.737 165.18 261.889C165.18 259.04 167.489 256.731 170.337 256.731H189.679C192.527 256.731 194.837 259.04 194.837 261.889C194.837 264.737 192.527 267.046 189.679 267.046Z"

@@ -18,13 +18,13 @@ export default function HeaderComponent() {
       <Subtitle>SOFTWARE ARCHITECT</Subtitle>
       <Navigation>
         <Link href={'/'} passHref>
-          <NavItem data-active={activeRoute === '/'}>CONSULTING</NavItem>
+          <NavItem data-active={activeRoute === '/'}>ABOUT</NavItem>
+        </Link>
+        <Link href={'/consulting'} passHref>
+          <NavItem data-active={activeRoute === '/consulting'}>CONSULTING</NavItem>
         </Link>
         <Link href={'/portfolio'} passHref>
           <NavItem data-active={activeRoute === '/portfolio'}>PORTFOLIO</NavItem>
-        </Link>
-        <Link href={'/resume'} passHref>
-          <NavItem data-active={activeRoute === '/resume'}>RESUME</NavItem>
         </Link>
       </Navigation>
     </Header>
