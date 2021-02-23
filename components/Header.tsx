@@ -1,12 +1,13 @@
 import { Header, Title, Subtitle, Navigation, NavItem } from 'styles/Header';
 import { DividerTop, DividerBottom } from 'styles/Shared';
 import Link from 'next/link';
-import router from 'next/router';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 export default function HeaderComponent() {
+  const router = useRouter();
   const [activeRoute, setActiveRoute] = useState('/');
-  useEffect(() => setActiveRoute(router.pathname), []);
+  useEffect(() => setActiveRoute(router.pathname), [router.pathname]);
   return (
     <Header>
       <Title>

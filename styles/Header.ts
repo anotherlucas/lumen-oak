@@ -5,27 +5,32 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height:42rem;
+  min-height:36rem;
+  background:${props => props.theme.background };
+  color:${props => props.theme.primaryColor };
+  transition: 
+    color ${props => props.theme.transitionSpeed } linear, 
+    background ${props => props.theme.transitionSpeed } linear;
 `;
 
 export const Title = styled.h1`
   position:relative;
   margin: 4rem auto .5rem;
-  padding: 1.25rem 2rem;
+  padding: 1rem 4rem;
   text-align:center;
-  font-weight:500;
-  font-size:6rem;
-  letter-spacing:.25rem;
+  font-weight:400;
+  font-size:4.75rem;
+  letter-spacing:.3125rem;
 `
 
 export const Subtitle = styled.h4`
   display:flex;
   align-items:center;
-  height:6.25rem;
+  height:5.25rem;
   margin: 0 auto 1rem;
   text-align:center;
   font-weight:300;
-  font-size:1.875rem;
+  font-size:1.625rem;
   letter-spacing:.5rem;
 `
 
@@ -41,17 +46,16 @@ export const NavItem = styled.a`
   margin: 0 .875rem;
   padding: 1.75rem 0;
   text-decoration:none;
-  color:#FF6B00;
+  color:${props => props.theme.primaryColor };
+  transition: color ${props => props.theme.transitionSpeed } linear;
   font-size:1.25rem;
-  font-weight:300;
+  font-weight:400;
   letter-spacing:.3125rem;
   cursor:pointer;
   opacity:.5;
   &[data-active="true"]{
-    font-style:italic;
     cursor:default;
     opacity:1;
-    letter-spacing:.375rem;
     &:before {
       content:'>';
       position:absolute;

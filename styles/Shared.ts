@@ -3,7 +3,16 @@ import styled from 'styled-components';
 export const Divider = styled.span`
   height:1px;
   width:100%;
-  background:linear-gradient(to right, #FFF, #FF6B00, #FFF);
+  background: ${props => props.theme.primaryColor };
+  transition: background ${props => props.theme.transitionSpeed } linear;
+  &:before {
+    content:'';
+    position:absolute;
+    left:0;
+    width:100%;
+    height:1px;
+    background:linear-gradient(to right, ${props => props.theme.background }, ${props => props.theme.primaryColor }00, ${props => props.theme.background });
+  }
 `
 
 export const DividerTop = styled(Divider)`
@@ -25,12 +34,13 @@ export const SectionTitle = styled.h2`
   justify-content:center;
   width:100%;
   min-height:5.25rem;
-  background:#FFF;
+  background:${props => props.theme.background };
   text-align:center;
   font-weight:300;
-  font-size:2.125rem;
+  font-size:2rem;
   letter-spacing:.25rem;
   z-index:10;
+  transition: background ${props => props.theme.transitionSpeed } linear;
 `
 
 export const SectionHeader = styled.h4`

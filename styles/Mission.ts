@@ -37,9 +37,10 @@ export const TechnologyPlan = styled.div`
   max-width:48rem;
   padding: 4rem 2.75rem;
   margin: 0 auto;
-  border:.1875rem solid #FF6B00;
+  border:.1875rem solid ${props => props.theme.primaryColor};
   border-radius:10px;
   box-shadow: 0px .25rem .3125rem rgba(255, 107, 0, 0.25);
+  transition: border-color ${props => props.theme.transitionSpeed} linear;
 `
 
 export const TechnologyPlanHeaderWrap = styled.div`
