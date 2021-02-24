@@ -64,7 +64,7 @@ function Application({ Component, pageProps }) {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const router = useRouter();
   let visibleTheme,
-    transitionSpeed = 4000;
+    transitionSpeed = 3000;
   useEffect(() => {
     setTimeout(() => {
       const nextTheme = themes[themes.indexOf(activeTheme) + 1] || themes[0];

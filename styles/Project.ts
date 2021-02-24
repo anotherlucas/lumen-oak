@@ -8,6 +8,7 @@ export const Project = styled.div`
   width:70rem;
   max-width:calc(100% - 2.5rem);
   margin: 2rem auto 0;
+  padding: 2rem 0 0;
 `;
 
 export const ProjectTitle = styled.h2`
@@ -96,10 +97,14 @@ export const Image = styled.img`
   position:absolute;
   max-height:60%;
   max-width:100%;
-  transition: all 200ms ease-out;
+  transition: all 100ms ease-out;
   opacity:0;
   user-select:none;
   pointer-events:all;
+  cursor:pointer;
+  &:hover {
+    opacity:1 !important;
+  }
   &[data-position="0"]{
     max-height:100%;
     opacity:1;
@@ -107,7 +112,7 @@ export const Image = styled.img`
   }
   &[data-position="-1"],
   &[data-position="1"]{
-    opacity:.5;
+    opacity:.85;
     max-height:90%;
     margin: 1% auto;
     z-index:5;
@@ -116,12 +121,18 @@ export const Image = styled.img`
   &[data-position="2"]{
     max-height:80%;
     margin: 3% auto;
-    opacity:.25;
+    opacity:.65;
   }
   &[data-position="-3"],
   &[data-position="3"]{
     max-height:70%;
     margin: 5% auto;
+    opacity:.35;
+  }
+  &[data-position="-4"],
+  &[data-position="4"]{
+    max-height:60%;
+    margin: 8% auto;
     opacity:.1;
   }
 `

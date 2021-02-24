@@ -64,15 +64,15 @@ export default function ProjectComponent({ Logo, images }: Props) {
     if (maxHeight) {
       setImageDimensions(updatedDimensions);
       setcontainerDimensions({
-        height: maxHeight < 42 * windowSize.rem ? maxHeight : 42 * windowSize.rem,
+        height: maxHeight < 38 * windowSize.rem ? maxHeight : 38 * windowSize.rem,
         width: windowSize.width - 2.5 * windowSize.rem,
         xyRatio:
           (windowSize.width - 2.5 * windowSize.rem) /
-          (maxHeight < 36 * windowSize.rem ? maxHeight : 36 * windowSize.rem),
+          (maxHeight < 38 * windowSize.rem ? maxHeight : 38 * windowSize.rem),
       });
     }
   }, [windowSize.width, fadeIn]);
-  setTimeout(() => setFadeIn(true), 500);
+  setTimeout(() => setFadeIn(true), 1000);
 
   return (
     <Project>
@@ -88,7 +88,7 @@ export default function ProjectComponent({ Logo, images }: Props) {
           </Modal>
         </FullScreenModal>
       ) : null}
-      <DividerTop />
+      <DividerTop style={{ marginTop:'2rem'}}/>
       <LogoWrap>{Logo}</LogoWrap>
       <ImageCarousel>
         <ImageSwitcher style={{ height: `${containerDimensions ? containerDimensions.height : 100}px` }}>
@@ -143,7 +143,7 @@ export default function ProjectComponent({ Logo, images }: Props) {
                 }
               }
               return (
-                <ImageWrap key={`${src}-${i}`} onLoad={() => console.log('WTF')}>
+                <ImageWrap key={`${src}-${i}`}>
                   <Image
                     style={{ left: imageLeft }}
                     data-position={imagePosition}
@@ -156,7 +156,7 @@ export default function ProjectComponent({ Logo, images }: Props) {
             })}
           </Images>
         </ImageSwitcher>
-        <ImageList>
+        {/* <ImageList>
           <ImageSwitch onClick={() => activeImage - 1 >= 0 && setActiveImage(activeImage - 1)}>
             <Arrow />
           </ImageSwitch>
@@ -167,7 +167,7 @@ export default function ProjectComponent({ Logo, images }: Props) {
           >
             <Arrow />
           </ImageSwitch>
-        </ImageList>
+        </ImageList> */}
       </ImageCarousel>
     </Project>
   );

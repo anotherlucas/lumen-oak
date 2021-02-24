@@ -62,9 +62,9 @@ export const SectionCopy = styled.p`
   margin: 0rem auto 1.75rem;
   text-align:center;
   font-weight:400;
-  font-size:1.5rem;
-  line-height:2.625rem;
-  letter-spacing:.1875rem;
+  font-size:1.4375rem;
+  line-height:2.5rem;
+  letter-spacing:.125rem;
 `
 
 export const SectionSubheader = styled.div`

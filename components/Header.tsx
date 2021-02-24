@@ -24,7 +24,7 @@ export default function HeaderComponent() {
           <NavItem data-active={activeRoute === '/consulting'}>CONSULTING</NavItem>
         </Link>
         <Link href={'/portfolio'} passHref>
-          <NavItem data-active={activeRoute === '/portfolio'}>PORTFOLIO</NavItem>
+          <NavItem data-active={activeRoute === '/portfolio'}>DESIGN</NavItem>
         </Link>
       </Navigation>
     </Header>

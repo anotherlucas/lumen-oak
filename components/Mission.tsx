@@ -25,12 +25,12 @@ export default function MissionComponent() {
     <Mission>
       <SectionTitle>
         <DividerTop />
-        THE LUCAS LEMOS ADVANTAGE
+        HOW I HELP MY CLIENTS
         <DividerBottom />
       </SectionTitle>
       <SectionHeader>CLEAR TECHNOLOGY DIRECTION</SectionHeader>
       <SectionCopy>
-        I translate your software vision into <br />
+        Translate your software vision into <br />
         actionable and effective technology plans
       </SectionCopy>
       <SoftwareVisionWrap>
@@ -86,10 +86,10 @@ export default function MissionComponent() {
       <AndDivider>
         <DividerTop />
       </AndDivider>
-      <SectionHeader>ENGINEERING OVERSIGHT</SectionHeader>
+      <SectionHeader>ENGINEERING LEADERSHIP</SectionHeader>
       <SectionCopy>
-        I mobilize and supervise the engineering teams <br />
-        that bring software projects to life
+        Mobilize, motivate and supervise the engineering teams <br />
+        that bring your software projects to life
       </SectionCopy>
       <OfficeWrap>
         <Office />
