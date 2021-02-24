@@ -125,8 +125,8 @@ export const OfficeWrap = styled.div`
   align-items:flex-start;
   justify-content:flex-start;
   min-height:40rem;
-  width:100%;
-  margin-bottom:4rem;
+  width:calc(100% + 4rem);
+  margin: 0 0 2rem -2rem;
   svg {
     position:absolute;
     top:0;

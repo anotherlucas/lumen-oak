@@ -14,18 +14,17 @@ export default function PhilosophyComponent() {
       </SectionTitle>
       <SectionHeader>BETTER PLAN, BETTER SOFTWARE</SectionHeader>
       <SectionCopy>
-        An expertly prepared technology plan prevents costly mistakes, and ensures you get the most of your development
-        dollar
+        An expertly prepared technology plan prevents costly mistakes, and ensures you get the most for your investment
       </SectionCopy>
       <SectionSubheader>
-        WITH A TECHNOLOGY PLAN
+        WITH A GOOD PLAN
         <DividerBottom />
       </SectionSubheader>
       <WithPlanWrap>
         <WithPlan />
       </WithPlanWrap>
       <SectionSubheader>
-        WITHOUT A TECHNOLOGY PLAN
+        WITHOUT A GOOD PLAN
         <DividerBottom />
       </SectionSubheader>
       <WithoutPlanWrap>

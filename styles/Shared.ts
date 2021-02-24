@@ -52,19 +52,19 @@ export const SectionHeader = styled.h4`
   text-align:center;
   font-weight:600;
   font-size:2.25rem;
+  line-height:3.25rem;
   letter-spacing:.25rem;
 `
 
 export const SectionCopy = styled.p`
   display:flex;
   align-items:center;
-  min-height: 8rem;
-  margin: 0rem auto 1.75rem;
+  margin: 1.75rem auto 2.5rem;
   text-align:center;
   font-weight:400;
-  font-size:1.4375rem;
-  line-height:2.5rem;
-  letter-spacing:.125rem;
+  font-size:1.625rem;
+  line-height:2.75rem;
+  letter-spacing:.0625rem;
 `
 
 export const SectionSubheader = styled.div`

@@ -55,8 +55,8 @@ const themes = [
 const neutralTheme = {
   background: '#FFFFFF',
   primaryColor: '#000000',
-  secondaryColor: '#000000',
-  tertiaryColor: '#000000',
+  secondaryColor: '#9E9E9E',
+  tertiaryColor: '#CBCBCB',
 };
 
 function Application({ Component, pageProps }) {

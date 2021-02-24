@@ -2,19 +2,20 @@ import useWindowSize from 'hooks/useWindowSize';
 import {
   Project,
   LogoWrap,
+  Content,
   ImageCarousel,
-  ImageSwitcher,
   ImageSwitch,
   Images,
   ImageWrap,
   Image,
   FullScreenModal,
   Modal,
-  FullScreenBtn,
+  ImageSwitcher,
   ImageList,
   ImageListItem,
+  ProjectCopy
 } from 'styles/Project';
-import { DividerTop } from 'styles/Shared';
+import { DividerTop, DividerBottom } from 'styles/Shared';
 import { useState, useRef, useEffect } from 'react';
 import Arrow from 'svgs/Arrow';
 import Expand from 'svgs/Expand';
@@ -23,6 +24,7 @@ import defer from 'lodash/defer';
 interface Props {
   Logo: JSX.Element;
   images: Array<String>;
+  defaultImage?: number;
 }
 
 type ContainerDimensions = {
@@ -37,9 +39,8 @@ type ImageDimensions = {
   xyRatio: number;
 };
 
-export default function ProjectComponent({ Logo, images }: Props) {
-  const [activeImage, setActiveImage] = useState(0);
-  const [loadCount, setLoadCount] = useState(0);
+export default function ProjectComponent({ Logo, images, defaultImage = 0 }: Props) {
+  const [activeImage, setActiveImage] = useState(defaultImage);
   const [fadeIn, setFadeIn] = useState(false);
   const [fullScreen, setFullScreen] = useState(null);
   const [containerDimensions, setcontainerDimensions] = useState<ContainerDimensions>();
@@ -90,8 +91,11 @@ export default function ProjectComponent({ Logo, images }: Props) {
       ) : null}
       <DividerTop style={{ marginTop: '2rem' }} />
       <LogoWrap>{Logo}</LogoWrap>
-      <ImageCarousel>
-        <ImageSwitcher style={{ height: `${containerDimensions ? containerDimensions.height : 100}px` }}>
+      <Content>
+        {/* <ProjectCopy>
+          A series eCommerce storefronts for customizable products
+        </ProjectCopy> */}
+        <ImageCarousel style={{ height: `${containerDimensions ? containerDimensions.height : 100}px` }}>
           <Images>
             {images.map((src, i) => {
               const imagePosition = i - activeImage;
@@ -120,7 +124,7 @@ export default function ProjectComponent({ Logo, images }: Props) {
                           ((10 - k) / 10)
                         : containerDimensions.width * ((10 - k) / 10);
                   }
-                  totalLeft += imageWidth * ((10 + imagePosition) / 10);
+                  totalLeft += ( containerDimensions.xyRatio * ((10 + imagePosition) / 10)) > imageDimensions[i].xyRatio ? imageWidth * ((10 + imagePosition) / 10) : imageWidth;
                   imageLeft = `calc(50% - ${totalLeft}px)`;
                 } else if (imagePosition > 0) {
                   let totalLeft =
@@ -155,20 +159,30 @@ export default function ProjectComponent({ Logo, images }: Props) {
               );
             })}
           </Images>
-        </ImageSwitcher>
-        {/* <ImageList>
+        </ImageCarousel>
+        <ImageSwitcher>
           <ImageSwitch onClick={() => activeImage - 1 >= 0 && setActiveImage(activeImage - 1)}>
             <Arrow />
           </ImageSwitch>
-          <ImageListItem />
+          <ImageList>
+            { images.map((img, i) => (
+                <ImageListItem
+                  data-active={ activeImage === i }
+                  onClick={() => setActiveImage(i)}
+                />
+              ))
+            }
+            
+          </ImageList>
+          
           <ImageSwitch
             data-direction="right"
             onClick={() => activeImage + 1 !== images.length && setActiveImage(activeImage + 1)}
           >
             <Arrow />
           </ImageSwitch>
-        </ImageList> */}
-      </ImageCarousel>
+        </ImageSwitcher>
+      </Content>
     </Project>
   );
 }

@@ -6,8 +6,9 @@ export const Start = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   width:58rem;
+  min-height:42rem;
   max-width:calc(100% - 4rem);
-  margin: -1rem auto 12rem;
+  margin: 0 auto;
 `;
 
 export const InCard = styled.span`

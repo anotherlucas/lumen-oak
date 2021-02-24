@@ -5,9 +5,9 @@ export const Project = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width:70rem;
+  width:58rem;
   max-width:calc(100% - 2.5rem);
-  margin: 2rem auto 0;
+  margin: 0 auto 6rem;
   padding: 2rem 0 0;
 `;
 
@@ -47,34 +47,15 @@ export const LogoWrap = styled.div`
     margin: -10% 0 0;
   }
 `
-export const ImageCarousel = styled.div`
+export const Content = styled.div`
   position:relative;
   display:flex;
   flex-direction:column;
   width:100%;
-  margin: 2.25rem auto 5rem;
+  margin: 2.25rem auto 0;
 `
-export const ImageSwitcher = styled.div`
+export const ImageCarousel = styled.div`
   display:flex;
-`
-export const ImageSwitch = styled.div`
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:4rem;
-  padding: 0;
-  opacity:.3;
-  cursor:pointer;
-  &:hover {
-    opacity:1;
-  }
-  &[data-direction="right"]{
-    transform:rotate(180deg);
-  }
-  svg {
-    position:relative;
-    width:50%;
-  }
 `
 export const Images = styled.div`
   position:relative;
@@ -191,5 +172,61 @@ export const FullScreenBtn = styled.button`
   }
 `
 
-export const ImageList = styled.div``
-export const ImageListItem = styled.div``
+export const ImageSwitcher = styled.div`
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:6rem;
+  margin: .25rem 0;
+`
+export const ImageSwitch = styled.div`
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:6.75rem;
+  padding: 0 2.25rem;
+  cursor:pointer;
+  outline:none;
+  &[data-direction="right"]{
+    transform:rotate(180deg);
+  }
+  svg {
+    position:relative;
+    width:50%;
+  }
+`
+
+export const ImageList = styled.div`
+  flex;1;
+  display:flex;
+  margin: 0;
+  align-items:center;
+`
+export const ImageListItem = styled.div`
+  width:2rem;
+  height:2rem;
+  margin: 0 .25rem;
+  border-radius:100%;
+  background: ${props => props.theme.tertiaryColor};
+  border: .25rem solid ${props => props.theme.tertiaryColor};
+  cursor:pointer;
+  &:hover {
+    background: ${props => props.theme.secondaryColor};
+  }
+  &[data-active="true"]{
+    background: ${props => props.theme.primaryColor};
+    cursor:default;
+  }
+`
+
+export const ProjectCopy = styled.p`
+  display:flex;
+  align-items:center;
+  margin: 0 auto 2.25rem;
+  text-align:center;
+  font-weight:400;
+  font-size:1.625rem;
+  line-height:2.75rem;
+  letter-spacing:.0625rem;
+`
