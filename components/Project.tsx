@@ -88,7 +88,7 @@ export default function ProjectComponent({ Logo, images }: Props) {
           </Modal>
         </FullScreenModal>
       ) : null}
-      <DividerTop style={{ marginTop:'2rem'}}/>
+      <DividerTop style={{ marginTop: '2rem' }} />
       <LogoWrap>{Logo}</LogoWrap>
       <ImageCarousel>
         <ImageSwitcher style={{ height: `${containerDimensions ? containerDimensions.height : 100}px` }}>
