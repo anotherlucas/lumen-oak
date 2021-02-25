@@ -7,7 +7,7 @@ export const Project = styled.div`
   justify-content: flex-start;
   width:58rem;
   max-width:calc(100% - 2.5rem);
-  margin: 0 auto 6rem;
+  margin: 0 auto 5.5rem;
   padding: 2rem 0 0;
 `;
 

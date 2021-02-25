@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Mission from 'components/Mission';
-import Philosophy from 'components/Philosophy';
-import Skills from 'components/Skills';
-import Serving from 'components/Serving';
-import Start from 'components/Start';
+import Mission from 'components/Consulting/Mission';
+import Philosophy from 'components/Consulting/Philosophy';
+import Skills from 'components/Consulting/Skills';
+import Serving from 'components/Consulting/Serving';
+import Start from 'components/Consulting/Start';
 
 export default function HomePage() {
   return (

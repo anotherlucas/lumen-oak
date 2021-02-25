@@ -9,24 +9,6 @@ import { Main } from 'styles/App';
 
 const themes = [
   {
-    background: '#FFFDFA',
-    primaryColor: '#FF6B00',
-    secondaryColor: '#FFB276',
-    tertiaryColor: '#FFE0C9',
-  },
-  {
-    background: '#FBFCF4',
-    primaryColor: '#8B7810',
-    secondaryColor: '#D1C379',
-    tertiaryColor: '#EAE0AB',
-  },
-  {
-    background: '#F9FEFB',
-    primaryColor: '#07842A',
-    secondaryColor: '#75DC92',
-    tertiaryColor: '#C2F4D0',
-  },
-  {
     background: '#F7FCFF',
     primaryColor: '#003D68',
     secondaryColor: '#1471B5',
@@ -50,6 +32,24 @@ const themes = [
     secondaryColor: '#FF815A',
     tertiaryColor: '#FFC2AF',
   },
+  {
+    background: '#FFFDFA',
+    primaryColor: '#FF6B00',
+    secondaryColor: '#FFB276',
+    tertiaryColor: '#FFE0C9',
+  },
+  {
+    background: '#FBFCF4',
+    primaryColor: '#8B7810',
+    secondaryColor: '#D1C379',
+    tertiaryColor: '#EAE0AB',
+  },
+  {
+    background: '#F9FEFB',
+    primaryColor: '#07842A',
+    secondaryColor: '#75DC92',
+    tertiaryColor: '#C2F4D0',
+  },
 ];
 
 const neutralTheme = {
@@ -71,7 +71,7 @@ function Application({ Component, pageProps }) {
       setActiveTheme(nextTheme);
     }, transitionSpeed);
   }, [activeTheme]);
-  useEffect(() => (router.pathname === '/portfolio' ? setIsInitialLoad(true) : setIsInitialLoad(false)), [
+  useEffect(() => (router.pathname === '/design' ? setIsInitialLoad(true) : setIsInitialLoad(false)), [
     router.pathname,
   ]);
 
@@ -79,7 +79,7 @@ function Application({ Component, pageProps }) {
     ? { ...activeTheme, transitionSpeed: '500ms' }
     : { ...activeTheme, transitionSpeed: `${transitionSpeed}ms` };
   return (
-    <ThemeProvider theme={router.pathname === '/portfolio' ? { ...neutralTheme, transitionSpeed: '1s' } : visibleTheme}>
+    <ThemeProvider theme={router.pathname === '/design' ? { ...neutralTheme, transitionSpeed: '1s' } : visibleTheme}>
       <Main>
         <Header />
         <Component {...pageProps} />

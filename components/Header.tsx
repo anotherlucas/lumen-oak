@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-export default function HeaderComponent() {
+export default function ConsultingHeaderComponent() {
   const router = useRouter();
   const [activeRoute, setActiveRoute] = useState('/');
   useEffect(() => setActiveRoute(router.pathname), [router.pathname]);
@@ -23,8 +23,8 @@ export default function HeaderComponent() {
         <Link href={'/consulting'} passHref>
           <NavItem data-active={activeRoute === '/consulting'}>CONSULTING</NavItem>
         </Link>
-        <Link href={'/portfolio'} passHref>
-          <NavItem data-active={activeRoute === '/portfolio'}>DESIGN</NavItem>
+        <Link href={'/design'} passHref>
+          <NavItem data-active={activeRoute === '/design'}>DESIGN</NavItem>
         </Link>
       </Navigation>
     </Header>

@@ -1,10 +1,10 @@
 import Head from 'next/head';
-import Project from 'components/Project';
-import DesignOverview from 'components/DesignOverview';
+import Project from 'components/design/Project';
+import DesignOverview from 'components/design/Hero';
 
 import FlexconomyLogo from 'svgs/FlexconomyLogo';
 import AutokalLogo from 'svgs/AutokalLogo';
-import KiiyoLogo from 'svgs/KiiyoLogo';
+import TWILogo from 'svgs/TWILogo';
 
 export default function PortfolioPage() {
   return (
@@ -19,51 +19,46 @@ export default function PortfolioPage() {
         <DesignOverview />
         <Project
           Logo={<img src="/images/BA_Logo.png" />}
-          defaultImage={3}
-          images={[
-            'BA_MDEN.png',            
+          defaultImage={2}
+          images={[            
             'BA_Elf.png',
             'BA_SA2.png',
             'BA_SWU.png',
             'BA_Marley.png',
             'BA_Rico.png',
-            'BA_Grad2020.png',
-          ]}
-        />
-        <Project
-          Logo={<FlexconomyLogo />}
-          defaultImage={2}
-          images={[
-            'FLEX_Sell.png',
-            'FLEX_Operations.png',
-            'FLEX_Presentation.png',
-            'FLEX_Overview.png',
-            'FLEX_Interface.png',
-            'FLEX_Cards.png',
           ]}
         />
         <Project
           Logo={<AutokalLogo />}
+          defaultImage={2}
           images={[
-            'FLEX_Presentation.png',
-            'FLEX_Overview.png',
-            'FLEX_Operations.png',
-            'FLEX_Sell.png',
-            'FLEX_Interface.png',
-            'FLEX_Cards.png',
+            'AK_Event.png',
+            'AK_Participants.png',
+            'AK_Events.png',
+            'AK_VODs.png',
+            'AK_Replays.png',
           ]}
         />
+        {/* <Project
+          Logo={<FlexconomyLogo />}
+          defaultImage={0}
+          images={[
+            'FLEX_Overview.png',
+            'FLEX_Future.png',
+            'FLEX_Sell.png',
+            'FLEX_Operations.png',
+          ]}
+        /> */}
         <Project
-          Logo={<KiiyoLogo />}
+          Logo={<TWILogo />}
+          defaultImage={1}
           images={[
-            'FLEX_Presentation.png',
-            'FLEX_Overview.png',
-            'FLEX_Operations.png',
-            'FLEX_Sell.png',
-            'FLEX_Interface.png',
-            'FLEX_Cards.png',
+            'TWI_Starcraft.png',
+            'TWI_S4-2.png',
+            'TWI_CSGO3.png',
           ]}
         />
+        <DesignOverview />
       </div>
     </>
   );
