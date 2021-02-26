@@ -9,11 +9,11 @@ export const Main = styled.main`
     color ${props => props.theme.transitionSpeed } linear, 
     background ${props => props.theme.transitionSpeed } linear;
 
-  .fill-primary, .fill-secondary, .fill-tertiary, .fill-background {
-    transition: fill ${props => props.theme.transitionSpeed } linear !important;
-  }
+  .fill-primary, .fill-secondary, .fill-tertiary, .fill-background,
   .stroke-primary, .stroke-secondary, .stroke-tertiary {
-    transition: stroke ${props => props.theme.transitionSpeed } linear !important;
+    transition: 
+      fill ${props => props.theme.transitionSpeed } linear, 
+      stroke ${props => props.theme.transitionSpeed } linear;
   }
   .fill-primary {
     fill:${props => props.theme.primaryColor };

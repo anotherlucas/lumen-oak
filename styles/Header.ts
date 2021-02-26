@@ -11,11 +11,12 @@ export const Header = styled.div`
 export const Title = styled.h1`
   position:relative;
   margin: 5.5rem auto .5rem;
-  padding: 1rem 4rem;
+  padding: 1.25rem 4rem 1.75rem;
   text-align:center;
-  font-weight:600;
-  font-size:5.25rem;
-  letter-spacing:.3125rem;
+  font-family:'Lobster';
+  font-weight:400;
+  font-size:6.25rem;
+  letter-spacing:.25rem;
 `
 
 export const Subtitle = styled.h4`
@@ -24,7 +25,7 @@ export const Subtitle = styled.h4`
   height:5.25rem;
   margin: 0 auto 1rem;
   text-align:center;
-  font-weight:300;
+  font-weight:400;
   font-size:1.625rem;
   letter-spacing:.5rem;
 `

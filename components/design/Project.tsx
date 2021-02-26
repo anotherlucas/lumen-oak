@@ -167,6 +167,7 @@ export default function ProjectComponent({ Logo, images, defaultImage = 0 }: Pro
           <ImageList>
             { images.map((img, i) => (
                 <ImageListItem
+                  key={`${img}-list-item`}
                   data-active={ activeImage === i }
                   onClick={() => setActiveImage(i)}
                 />

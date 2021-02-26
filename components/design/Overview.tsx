@@ -2,7 +2,7 @@ import { DesignOverview } from 'styles/DesignOverview';
 import { SectionTitle, SectionHeader, SectionCopy, DividerTop, DividerBottom } from 'styles/Shared';
 
 
-export default function DesignHeroComponent() {
+export default function DesignOverviewComponent() {
   return (
     <DesignOverview>
       <SectionTitle>
@@ -12,8 +12,8 @@ export default function DesignHeroComponent() {
       </SectionTitle>
       <SectionHeader>CLEAR COMMUNICATION BY DESIGN</SectionHeader>
       <SectionCopy>
-        Great design reduces complexity<br />
-        And leads to exceptional software
+        The mark of exceptional software <br />
+        is a well-designed interface
       </SectionCopy>
     </DesignOverview>
   );

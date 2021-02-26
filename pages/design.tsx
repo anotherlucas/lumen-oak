@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Project from 'components/design/Project';
-import DesignOverview from 'components/design/Hero';
+import Overview from 'components/design/Overview';
+import CTA from 'components/design/CTA';
 
-import FlexconomyLogo from 'svgs/FlexconomyLogo';
 import AutokalLogo from 'svgs/AutokalLogo';
 import TWILogo from 'svgs/TWILogo';
 
@@ -10,13 +10,13 @@ export default function PortfolioPage() {
   return (
     <>
       <Head>
-        <title>LL | Portfolio</title>
+        <title>Design</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
       </Head>
 
       <div style={{ overflow: 'hidden' }}>
-        <DesignOverview />
+        <Overview />
         <Project
           Logo={<img src="/images/BA_Logo.png" />}
           defaultImage={2}
@@ -39,16 +39,6 @@ export default function PortfolioPage() {
             'AK_Replays.png',
           ]}
         />
-        {/* <Project
-          Logo={<FlexconomyLogo />}
-          defaultImage={0}
-          images={[
-            'FLEX_Overview.png',
-            'FLEX_Future.png',
-            'FLEX_Sell.png',
-            'FLEX_Operations.png',
-          ]}
-        /> */}
         <Project
           Logo={<TWILogo />}
           defaultImage={1}
@@ -58,7 +48,7 @@ export default function PortfolioPage() {
             'TWI_CSGO3.png',
           ]}
         />
-        <DesignOverview />
+        <CTA />
       </div>
     </>
   );
