@@ -37,7 +37,7 @@ export const SectionTitle = styled.h2`
   background:${props => props.theme.background };
   text-align:center;
   font-weight:300;
-  font-size:2rem;
+  font-size:1.875rem;
   letter-spacing:.25rem;
   z-index:10;
   transition: background ${props => props.theme.transitionSpeed } linear;
