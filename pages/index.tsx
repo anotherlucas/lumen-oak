@@ -12,6 +12,7 @@ export default function HomePage() {
         <title>Consulting</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
+        <meta property="og:image" content="https://www.lucaslemos.io/images/share.png"></meta>
       </Head>
 
       <>
