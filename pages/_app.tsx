@@ -61,6 +61,7 @@ const neutralTheme = {
 
 function Application({ Component, pageProps }) {
   const [activeTheme, setActiveTheme] = useState(themes[0]);
+  const [fadeIn, setFadeIn] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const router = useRouter();
   let visibleTheme,
@@ -75,12 +76,16 @@ function Application({ Component, pageProps }) {
     router.pathname,
   ]);
 
+  useEffect(() => {
+    setTimeout(() => setFadeIn(true), 250 )
+  }, [])
+
   visibleTheme = isInitialLoad
     ? { ...activeTheme, transitionSpeed: '500ms' }
     : { ...activeTheme, transitionSpeed: `${transitionSpeed}ms` };
   return (
     <ThemeProvider theme={router.pathname === '/design' ? { ...neutralTheme, transitionSpeed: '1s' } : visibleTheme}>
-      <Main>
+      <Main style={{ opacity: fadeIn ? 1 : 0 }}>
         <Header />
         <Component {...pageProps} />
       </Main>

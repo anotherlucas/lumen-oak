@@ -7,7 +7,8 @@ export const Main = styled.main`
   overflow:auto;
   transition: 
     color ${props => props.theme.transitionSpeed } linear, 
-    background ${props => props.theme.transitionSpeed } linear;
+    background ${props => props.theme.transitionSpeed } linear,
+    opacity 300ms ease-out;
 
   .fill-primary, .fill-secondary, .fill-tertiary, .fill-background,
   .stroke-primary, .stroke-secondary, .stroke-tertiary {
