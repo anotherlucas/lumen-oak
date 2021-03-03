@@ -12,20 +12,11 @@ import {
   Modal,
   ImageSwitcher,
   ImageList,
-  ImageListItem,
-  ProjectCopy
+  ImageListItem
 } from 'styles/Project';
-import { DividerTop, DividerBottom } from 'styles/Shared';
+import { DividerTop } from 'styles/Shared';
 import { useState, useRef, useEffect } from 'react';
 import Arrow from 'svgs/Arrow';
-import Expand from 'svgs/Expand';
-import defer from 'lodash/defer';
-
-interface Props {
-  Logo: JSX.Element;
-  images: Array<String>;
-  defaultImage?: number;
-}
 
 type ContainerDimensions = {
   height: number;
@@ -39,31 +30,40 @@ type ImageDimensions = {
   xyRatio: number;
 };
 
-export default function ProjectComponent({ Logo, images, defaultImage = 0 }: Props) {
+interface Props {
+  Logo: JSX.Element;
+  images: Array<String>;
+  defaultImage?: number;
+  order: number;
+  imageDimensions?:ImageDimensions[];
+}
+
+export default function ProjectComponent({ Logo, images, order, imageDimensions, defaultImage = 0 }: Props) {
   const [activeImage, setActiveImage] = useState(defaultImage);
   const [fadeIn, setFadeIn] = useState(false);
   const [fullScreen, setFullScreen] = useState(null);
   const [containerDimensions, setcontainerDimensions] = useState<ContainerDimensions>();
-  const [imageDimensions, setImageDimensions] = useState<ImageDimensions[]>([]);
-  const imagesRef = useRef([]);
+  // const [imageDimensions, setImageDimensions] = useState<ImageDimensions[]>([]);
+  // const imagesRef = useRef([]);
   const windowSize = useWindowSize();
-
   useEffect(() => {
-    const updatedDimensions = [...imageDimensions];
+    // const updatedDimensions = [...imageDimensions];
     let maxHeight = 0;
-    imagesRef.current.forEach((img: HTMLImageElement, i) => {
-      if (!imageDimensions[i]) {
-        updatedDimensions[i] = {
-          width: img.naturalWidth,
-          height: img.naturalHeight,
-          xyRatio: img.naturalWidth / img.naturalHeight,
-        };
-      }
-      const targetHeight = (windowSize.width * img.naturalHeight) / img.naturalWidth || 0;
+    imageDimensions.forEach((dimensions, i) => {
+    //   if (!imageDimensions[i]) {
+    //     updatedDimensions[i] = {
+    //       width: img.naturalWidth,
+    //       height: img.naturalHeight,
+    //       xyRatio: img.naturalWidth / img.naturalHeight,
+    //     };
+    //   }
+      const targetHeight = (windowSize.width * dimensions.height) / dimensions.width || 0;
       maxHeight = maxHeight > targetHeight ? maxHeight : targetHeight;
     });
-    if (maxHeight) {
-      setImageDimensions(updatedDimensions);
+    // });
+    // if (maxHeight) {
+      
+    //   setImageDimensions(updatedDimensions);
       setcontainerDimensions({
         height: maxHeight < 38 * windowSize.rem ? maxHeight : 38 * windowSize.rem,
         width: windowSize.width - 2.5 * windowSize.rem,
@@ -71,12 +71,19 @@ export default function ProjectComponent({ Logo, images, defaultImage = 0 }: Pro
           (windowSize.width - 2.5 * windowSize.rem) /
           (maxHeight < 38 * windowSize.rem ? maxHeight : 38 * windowSize.rem),
       });
-    }
+    // }
   }, [windowSize.width, fadeIn]);
-  setTimeout(() => setFadeIn(true), 1000);
+  setTimeout(() => setFadeIn(true), (750 + (500 * order)));
 
   return (
     <Project>
+      {images.map((src, i) => (
+        <Image
+          style={{ display:'none' }}
+          // ref={(img) => (imagesRef.current[i] = img)}
+          src={`/images/${src}`}
+        />
+      ))}
       {fullScreen !== null ? (
         <FullScreenModal
           data-overlay="true"
@@ -89,18 +96,20 @@ export default function ProjectComponent({ Logo, images, defaultImage = 0 }: Pro
           </Modal>
         </FullScreenModal>
       ) : null}
-      <DividerTop style={{ marginTop: '2rem' }} />
-      <LogoWrap>{Logo}</LogoWrap>
-      <Content>
+      <DividerTop style={{ opacity: fadeIn ? 1 : 0, transition:'opacity 300ms ease-out', marginTop: '2rem' }} />
+      <LogoWrap style={{ opacity: fadeIn ? 1 : 0 }}>{Logo}</LogoWrap>
+      <Content style={{ opacity: fadeIn ? 1 : 0 }}>
         {/* <ProjectCopy>
           A series eCommerce storefronts for customizable products
         </ProjectCopy> */}
+
+
         <ImageCarousel style={{ height: `${containerDimensions ? containerDimensions.height : 100}px` }}>
           <Images>
             {images.map((src, i) => {
               const imagePosition = i - activeImage;
               let imageLeft = `-100%`;
-              if (imageDimensions[i] && containerDimensions) {
+              if (imageDimensions[i] && containerDimensions && fadeIn) {
                 let imageWidth =
                   containerDimensions.xyRatio > imageDimensions[i].xyRatio
                     ? (imageDimensions[i].width * containerDimensions.height) / imageDimensions[i].height
@@ -151,7 +160,6 @@ export default function ProjectComponent({ Logo, images, defaultImage = 0 }: Pro
                   <Image
                     style={{ left: imageLeft }}
                     data-position={imagePosition}
-                    ref={(img) => (imagesRef.current[i] = img)}
                     onClick={() => (imagePosition === 0 ? setFullScreen(i) : setActiveImage(i))}
                     src={`/images/${src}`}
                   />

@@ -7,5 +7,6 @@ export const CTA = styled.div`
   justify-content: flex-start;
   width:58rem;
   max-width:calc(100% - 4rem);
-  margin: 0 auto 3rem;
+  min-height:42rem;
+  margin: 0 auto;
 `;

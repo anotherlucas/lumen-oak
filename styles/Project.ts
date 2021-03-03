@@ -34,6 +34,8 @@ export const LogoWrap = styled.div`
   background: ${props => props.theme.background};
   border-left: 1px solid ${props => props.theme.primaryColor};
   border-right: 1px solid ${props => props.theme.primaryColor};
+  opacity:0;
+  transition:opacity 300ms ease-out;
   user-select:none;
   svg {
     position:relative;
@@ -53,6 +55,8 @@ export const Content = styled.div`
   flex-direction:column;
   width:100%;
   margin: 2.25rem auto 0;
+  opacity:0;
+  transition:opacity 300ms ease-out;
 `
 export const ImageCarousel = styled.div`
   display:flex;

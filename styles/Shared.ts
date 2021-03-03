@@ -40,7 +40,9 @@ export const SectionTitle = styled.h2`
   font-size:1.875rem;
   letter-spacing:.25rem;
   z-index:10;
-  transition: background ${props => props.theme.transitionSpeed } linear;
+  transition: 
+    background ${props => props.theme.transitionSpeed } linear,
+    opacity 300ms 300ms ease-out;
 `
 
 export const SectionHeader = styled.h4`
@@ -54,6 +56,7 @@ export const SectionHeader = styled.h4`
   font-size:2.25rem;
   line-height:3.25rem;
   letter-spacing:.25rem;
+  transition: opacity 300ms 600ms ease-out;
 `
 
 export const SectionCopy = styled.p`
@@ -65,6 +68,7 @@ export const SectionCopy = styled.p`
   font-size:1.625rem;
   line-height:2.75rem;
   letter-spacing:.0625rem;
+  transition: opacity 300ms 900ms ease-out;
 `
 
 export const SectionSubheader = styled.div`
@@ -91,7 +95,7 @@ export const SectionButton = styled.button`
   margin:0 auto;
   background:${props => props.theme.background};
   color:${props => props.theme.primaryColor};
-  border: 2px solid ${props => props.theme.primaryColor};
+  border: .125rem solid ${props => props.theme.primaryColor};
   border-radius:.625rem;
   box-shadow: 0px .25rem .3125rem ${props => props.theme.primaryColor}44;
   font-family: 'Lato', sans-serif;

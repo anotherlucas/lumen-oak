@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Start, InCard } from 'styles/Start';
 import {
   SectionTitle,
@@ -30,7 +31,9 @@ export default function StartComponent() {
         FREE CONSULTATION
         <DividerBottom />
       </SectionSubheader>
-      <SectionButton style={{ marginTop: `-1.25rem` }}>SCHEDULE A CALL</SectionButton>
+      <Link href="https://calendly.com/ll-consulting/30min">
+        <SectionButton style={{ marginTop: `-1.25rem` }}>SCHEDULE A CALL</SectionButton>
+      </Link>
     </Start>
   );
 }

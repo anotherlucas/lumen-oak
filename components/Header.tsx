@@ -1,5 +1,5 @@
 import { Header, Title, Subtitle, Navigation, NavItem } from 'styles/Header';
-import { DividerTop, DividerBottom } from 'styles/Shared';
+import { DividerTop, DividerBottom, SectionButton } from 'styles/Shared';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -16,12 +16,15 @@ export default function ConsultingHeaderComponent() {
         <DividerBottom />
       </Title>
       <Subtitle>SOFTWARE ARCHITECT</Subtitle>
+      <Link href="https://calendly.com/ll-consulting/30min">
+        <SectionButton>SCHEDULE A CALL</SectionButton>
+      </Link>
       <Navigation>
-        <Link href={'/'} passHref>
+        {/* <Link href={'/'} passHref>
           <NavItem data-active={activeRoute === '/'}>ABOUT</NavItem>
-        </Link>
-        <Link href={'/consulting'} passHref>
-          <NavItem data-active={activeRoute === '/consulting'}>CONSULTING</NavItem>
+        </Link> */}
+        <Link href={'/'} passHref>
+          <NavItem data-active={activeRoute === '/'}>CONSULTING</NavItem>
         </Link>
         <Link href={'/design'} passHref>
           <NavItem data-active={activeRoute === '/design'}>DESIGN</NavItem>

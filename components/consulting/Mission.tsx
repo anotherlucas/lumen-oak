@@ -48,7 +48,7 @@ export default function MissionComponent() {
             DEVELOPMENT <br /> ROADMAP
           </PlanLabel>
           <PlanCopy>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+            A prioritized breakdown of the engineering work necessary to complete the project
           </PlanCopy>
         </PlanItem>
         <PlanItem>
@@ -59,7 +59,7 @@ export default function MissionComponent() {
             UX/UI <br /> DESIGN
           </PlanLabel>
           <PlanCopy>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+            Beautifully functional interface designs that provide clear direction for the frontend team
           </PlanCopy>
         </PlanItem>
         <PlanItem>
@@ -69,7 +69,9 @@ export default function MissionComponent() {
           <PlanLabel>
             TEAM <br /> STRUCTURE
           </PlanLabel>
-          <PlanCopy>How many people you will need How to structure the team What skills are needed</PlanCopy>
+          <PlanCopy>
+            A map of the necessary talent to effectively execute the project on-time and on-budget
+          </PlanCopy>
         </PlanItem>
         <PlanItem>
           <PlanImage>
@@ -79,7 +81,7 @@ export default function MissionComponent() {
             TECHNOLOGY <br /> GUIDANCE
           </PlanLabel>
           <PlanCopy>
-            What languages & frameworks to use How to structure your infrastructure What security precautions are needed
+            Guidance on selecting project programming languages, frameworks and infrastructure
           </PlanCopy>
         </PlanItem>
       </TechnologyPlan>

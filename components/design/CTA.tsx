@@ -1,27 +1,29 @@
+import Link from 'next/link';
 import { CTA } from 'styles/CTA';
 import { SectionTitle, SectionHeader, SectionSubheader, SectionButton, SectionCopy, DividerTop, DividerBottom } from 'styles/Shared';
-
 
 export default function CTAComponent() {
   return (
     <CTA>
       <SectionTitle>
         <DividerTop />
-        THE TIP OF THE ICEBERG
+        LET'S WORK TOGETHER
         <DividerBottom />
       </SectionTitle>
-      <SectionHeader>CLEAR COMMUNICATION BY DESIGN</SectionHeader>
+      <SectionHeader>FRONTEND EXPERT FOR HIRE</SectionHeader>
       <SectionCopy>
-        This is just a small sample of what I'm able to show<br />
-        Let me design your next software project
+        Need an expert design eye for a short-term project?<br />
+        Let me design and develop your next piece of software
       </SectionCopy>
       <SectionSubheader>
         FREE CONSULTATION
         <DividerBottom />
       </SectionSubheader>
-      <SectionButton>
-        SCHEDULE TODAY
-      </SectionButton>
+      <Link href="https://calendly.com/ll-consulting/30min">
+        <SectionButton>
+          SCHEDULE TODAY
+        </SectionButton>
+      </Link>
     </CTA>
   );
 }

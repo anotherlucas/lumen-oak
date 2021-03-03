@@ -5,7 +5,7 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height:36rem;
+  min-height:40rem;
 `;
 
 export const Title = styled.h1`
